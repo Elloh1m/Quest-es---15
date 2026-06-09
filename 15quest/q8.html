@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q8 — Alert + Document.write</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="q1.html">JS&nbsp;/&nbsp;deveres</a>
+    <div class="nav-links">
+      <a href="q1.html">Q1</a><a href="q2.html">Q2</a><a href="q3.html">Q3</a>
+      <a href="q4.html">Q4</a><a href="q5.html">Q5</a><a href="q6.html">Q6</a>
+      <a href="q7.html">Q7</a><a href="q8.html">Q8</a><a href="q9.html">Q9</a>
+      <a href="q10.html">Q10</a><a href="q11.html">Q11</a><a href="q12.html">Q12</a>
+      <a href="q13.html">Q13</a><a href="q14.html">Q14</a><a href="q15.html">Q15</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="question-badge">Questão 8</span>
+    <h1>Alert + Mensagem no Documento</h1>
+    <p class="description">
+      Script que exibe um <code>alert</code> com a frase <em>'Erro no Sistema'</em>
+      e, em seguida, escreve <em>'Por favor, tente mais tarde'</em> no documento.
+    </p>
+
+    <div class="code-block">
+      <pre><span class="fn">alert</span>(<span class="str">'Erro no Sistema'</span>);
+<span class="var">document</span>.<span class="fn">write</span>(<span class="str">'Por favor, tente mais tarde'</span>);</pre>
+    </div>
+
+    <div class="run-area">
+      <h2>▶ Executar</h2>
+      <button class="btn danger" onclick="runQ8()">Disparar script</button>
+      <div class="output-box" id="out">Clique para executar…</div>
+    </div>
+  </main>
+
+  <footer>deveres-js · questão 08 / 15</footer>
+  <script src="nav.js"></script>
+  <script>
+    function runQ8() {
+      alert('Erro no Sistema');
+      document.getElementById('out').textContent = 'Por favor, tente mais tarde';
+    }
+  </script>
+</body>
+</html>

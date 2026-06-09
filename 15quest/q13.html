@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q13 — Concatenar Strings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="q1.html">JS&nbsp;/&nbsp;deveres</a>
+    <div class="nav-links">
+      <a href="q1.html">Q1</a><a href="q2.html">Q2</a><a href="q3.html">Q3</a>
+      <a href="q4.html">Q4</a><a href="q5.html">Q5</a><a href="q6.html">Q6</a>
+      <a href="q7.html">Q7</a><a href="q8.html">Q8</a><a href="q9.html">Q9</a>
+      <a href="q10.html">Q10</a><a href="q11.html">Q11</a><a href="q12.html">Q12</a>
+      <a href="q13.html">Q13</a><a href="q14.html">Q14</a><a href="q15.html">Q15</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="question-badge">Questão 13</span>
+    <h1>Concatenar Duas Strings</h1>
+    <p class="description">
+      Crie um <code>alert</code> que concatena as strings <em>'Sexta-feira'</em>
+      e <em>'animada!'</em>.
+    </p>
+
+    <div class="code-block">
+      <pre><span class="fn">alert</span>(<span class="str">'Sexta-feira'</span> + <span class="str">' e '</span> + <span class="str">'animada!'</span>);</pre>
+    </div>
+
+    <div class="run-area">
+      <h2>▶ Executar</h2>
+      <button class="btn" onclick="runQ13()">Disparar alert</button>
+      <div class="output-box" id="out">Clique em executar…</div>
+    </div>
+  </main>
+
+  <footer>deveres-js · questão 13 / 15</footer>
+  <script src="nav.js"></script>
+  <script>
+    function runQ13() {
+      const msg = 'Sexta-feira' + ' e ' + 'animada!';
+      alert(msg);
+      document.getElementById('out').textContent = '> ' + msg;
+    }
+  </script>
+</body>
+</html>

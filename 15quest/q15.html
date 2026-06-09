@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q15 — PBL: Sistema de Log</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pbl-badge {
+      display:inline-block;
+      background: rgba(255,77,109,.12);
+      border: 1px solid var(--accent2);
+      color: var(--accent2);
+      font-family:'Space Mono',monospace;
+      font-size:.68rem;
+      padding:.2rem .6rem;
+      border-radius:4px;
+      letter-spacing:.1em;
+      margin-bottom:1rem;
+    }
+    .criteria {
+      background: var(--surface);
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding:1.1rem 1.3rem;
+      margin-bottom:1.5rem;
+      font-family:'Space Mono',monospace;
+      font-size:.78rem;
+      color:var(--muted);
+      line-height:1.8;
+    }
+    .criteria span { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="q1.html">JS&nbsp;/&nbsp;deveres</a>
+    <div class="nav-links">
+      <a href="q1.html">Q1</a><a href="q2.html">Q2</a><a href="q3.html">Q3</a>
+      <a href="q4.html">Q4</a><a href="q5.html">Q5</a><a href="q6.html">Q6</a>
+      <a href="q7.html">Q7</a><a href="q8.html">Q8</a><a href="q9.html">Q9</a>
+      <a href="q10.html">Q10</a><a href="q11.html">Q11</a><a href="q12.html">Q12</a>
+      <a href="q13.html">Q13</a><a href="q14.html">Q14</a><a href="q15.html">Q15</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="question-badge">Questão 15</span>
+    <div class="pbl-badge">PBL — Situação de Aprendizagem</div>
+
+    <h1>Sistema de Log de Acesso</h1>
+    <p class="description">
+      Startup contratou um desenvolvedor para criar um sistema de log básico.
+      Ao carregar o sistema, o status do banco de dados aparece no console,
+      uma mensagem de <em>'Acesso Permitido'</em> é exibida em um alert,
+      e o nome do usuário logado é impresso no corpo da página.
+    </p>
+
+    <div class="criteria">
+      <span>Papel:</span> Desenvolvedor Front-end Junior<br>
+      <span>Critérios:</span> uso correto dos três comandos de saída JS<br>
+      <span>Tempo:</span> 30 minutos
+    </div>
+
+    <div class="code-block">
+      <pre><span class="cm">// 1. Status do banco → console</span>
+<span class="var">console</span>.<span class="fn">log</span>(<span class="str">'Banco de dados: CONECTADO'</span>);
+
+<span class="cm">// 2. Acesso → alert</span>
+<span class="fn">alert</span>(<span class="str">'Acesso Permitido'</span>);
+
+<span class="cm">// 3. Nome do usuário → document.write / DOM</span>
+<span class="var">document</span>.<span class="fn">write</span>(<span class="str">'Usuário: Ana Silva'</span>);</pre>
+    </div>
+
+    <div class="run-area">
+      <h2>▶ Simular sistema</h2>
+      <div style="display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+        <input type="text" id="nomeUsuario" placeholder="Nome do usuário logado" value="Ana Silva" style="flex:1;min-width:160px;">
+      </div>
+      <button class="btn" onclick="runQ15()">Iniciar sistema</button>
+      <div class="output-box" id="out" style="line-height:2;">Aguardando inicialização…</div>
+    </div>
+  </main>
+
+  <footer>deveres-js · questão 15 / 15</footer>
+  <script src="nav.js"></script>
+  <script>
+    function runQ15() {
+      const nome = document.getElementById('nomeUsuario').value || 'Ana Silva';
+
+      // 1. console.log
+      console.log('Banco de dados: CONECTADO');
+
+      // 2. alert
+      alert('Acesso Permitido');
+
+      // 3. Exibir nome no corpo
+      const out = document.getElementById('out');
+      out.innerHTML =
+        '<span style="color:var(--muted);">[console]</span> Banco de dados: CONECTADO\n' +
+        '<span style="color:var(--muted);">[alert]  </span> Acesso Permitido\n' +
+        '<span style="color:var(--muted);">[body]   </span> Usuário: ' + nome;
+    }
+  </script>
+</body>
+</html>

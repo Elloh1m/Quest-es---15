@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q4 — Soma de Variáveis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="q1.html">JS&nbsp;/&nbsp;deveres</a>
+    <div class="nav-links">
+      <a href="q1.html">Q1</a><a href="q2.html">Q2</a><a href="q3.html">Q3</a>
+      <a href="q4.html">Q4</a><a href="q5.html">Q5</a><a href="q6.html">Q6</a>
+      <a href="q7.html">Q7</a><a href="q8.html">Q8</a><a href="q9.html">Q9</a>
+      <a href="q10.html">Q10</a><a href="q11.html">Q11</a><a href="q12.html">Q12</a>
+      <a href="q13.html">Q13</a><a href="q14.html">Q14</a><a href="q15.html">Q15</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="question-badge">Questão 4</span>
+    <h1>Soma de Duas Variáveis</h1>
+    <p class="description">
+      Programa que declara duas variáveis numéricas, soma-as e exibe o resultado em um <code>alert</code>.
+    </p>
+
+    <div class="code-block">
+      <pre><span class="kw">let</span> <span class="var">a</span> = <span class="num">10</span>;
+<span class="kw">let</span> <span class="var">b</span> = <span class="num">25</span>;
+<span class="kw">let</span> <span class="var">resultado</span> = <span class="var">a</span> + <span class="var">b</span>;
+<span class="fn">alert</span>(<span class="str">'Resultado: '</span> + <span class="var">resultado</span>);</pre>
+    </div>
+
+    <div class="run-area">
+      <h2>▶ Calculadora interativa</h2>
+      <div style="display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem;">
+        <input type="number" id="va" value="10" style="width:80px">
+        <span style="color:var(--accent);font-family:'Space Mono',monospace;font-size:1.2rem">+</span>
+        <input type="number" id="vb" value="25" style="width:80px">
+      </div>
+      <button class="btn" onclick="runQ4()">Calcular &amp; alert</button>
+      <div class="output-box" id="out">Clique em calcular…</div>
+    </div>
+  </main>
+
+  <footer>deveres-js · questão 04 / 15</footer>
+  <script src="nav.js"></script>
+  <script>
+    function runQ4() {
+      let a = Number(document.getElementById('va').value);
+      let b = Number(document.getElementById('vb').value);
+      let resultado = a + b;
+      alert('Resultado: ' + resultado);
+      document.getElementById('out').textContent = 'Resultado: ' + resultado;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 — Nome do Curso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="q1.html">JS&nbsp;/&nbsp;deveres</a>
+    <div class="nav-links">
+      <a href="q1.html">Q1</a><a href="q2.html">Q2</a><a href="q3.html">Q3</a>
+      <a href="q4.html">Q4</a><a href="q5.html">Q5</a><a href="q6.html">Q6</a>
+      <a href="q7.html">Q7</a><a href="q8.html">Q8</a><a href="q9.html">Q9</a>
+      <a href="q10.html">Q10</a><a href="q11.html">Q11</a><a href="q12.html">Q12</a>
+      <a href="q13.html">Q13</a><a href="q14.html">Q14</a><a href="q15.html">Q15</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="question-badge">Questão 2</span>
+    <h1>Nome do Curso no HTML</h1>
+    <p class="description">
+      Usando <code>document.write</code> para escrever o nome de um curso
+      diretamente no corpo do documento HTML.
+    </p>
+
+    <div class="code-block">
+      <pre><span class="var">document</span>.<span class="fn">write</span>(<span class="str">'Desenvolvimento Front-end Junior'</span>);</pre>
+    </div>
+
+    <div class="run-area">
+      <h2>▶ Resultado</h2>
+      <div class="output-box" id="out"></div>
+    </div>
+  </main>
+
+  <footer>deveres-js · questão 02 / 15</footer>
+  <script src="nav.js"></script>
+  <script>
+    document.getElementById('out').textContent = 'Desenvolvimento Front-end Junior';
+  </script>
+</body>
+</html>

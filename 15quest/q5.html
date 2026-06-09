@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q5 — Título com document.write</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="q1.html">JS&nbsp;/&nbsp;deveres</a>
+    <div class="nav-links">
+      <a href="q1.html">Q1</a><a href="q2.html">Q2</a><a href="q3.html">Q3</a>
+      <a href="q4.html">Q4</a><a href="q5.html">Q5</a><a href="q6.html">Q6</a>
+      <a href="q7.html">Q7</a><a href="q8.html">Q8</a><a href="q9.html">Q9</a>
+      <a href="q10.html">Q10</a><a href="q11.html">Q11</a><a href="q12.html">Q12</a>
+      <a href="q13.html">Q13</a><a href="q14.html">Q14</a><a href="q15.html">Q15</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="question-badge">Questão 5</span>
+    <h1>Seu Nome em H1</h1>
+    <p class="description">
+      Usando <code>document.write</code> para escrever seu nome dentro de uma tag de título <code>&lt;h1&gt;</code>.
+    </p>
+
+    <div class="code-block">
+      <pre><span class="var">document</span>.<span class="fn">write</span>(<span class="str">'&lt;h1&gt;Meu Nome&lt;/h1&gt;'</span>);</pre>
+    </div>
+
+    <div class="run-area">
+      <h2>▶ Resultado</h2>
+      <div style="margin-bottom:.75rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;">
+        <input type="text" id="nome" placeholder="Digite seu nome" value="Meu Nome" style="flex:1;min-width:140px;">
+        <button class="btn" onclick="runQ5()">Escrever H1</button>
+      </div>
+      <div class="output-box" id="out">
+        <span id="resultado" style="font-size:1.3rem;font-weight:800;font-family:'Syne',sans-serif;color:#e8eaf0;">Meu Nome</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>deveres-js · questão 05 / 15</footer>
+  <script src="nav.js"></script>
+  <script>
+    function runQ5() {
+      const nome = document.getElementById('nome').value || 'Meu Nome';
+      document.getElementById('resultado').textContent = nome;
+    }
+  </script>
+</body>
+</html>
